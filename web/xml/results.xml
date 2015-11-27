@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<results question="^Who is your favourite?^ ">
+	
+<pollitem>
+		
+<entryname>PHP</entryname>
+		
+<votes>1</votes>
+	
+</pollitem>
+	
+<pollitem>
+		
+<entryname>Java</entryname>
+	
+	<votes>0</votes>
+	
+</pollitem>
+	
+<pollitem>
+	
+	<entryname>Python</entryname>
+	
+	<votes>0</votes>
+	
+</pollitem>
+	
+<pollitem>
+		
+<entryname>Java Script</entryname>
+	
+	<votes>0</votes>
+	
+</pollitem>
+	
+<pollitem>
+	
+	<entryname>Ruby</entryname>
+	
+	<votes>0</votes>
+	
+	
+
+	
+</pollitem>
+</results>
+
