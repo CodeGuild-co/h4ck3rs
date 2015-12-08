@@ -116,8 +116,78 @@ this is an issue.</br><br>How do we get past this?</br>Firstly we need to identi
 <li>1. Erasure: This is when you have missing bits</li>
 <li>2. Error: When one or more bits are incorrect e.g. 100110 becomes 100111</li>
 </ul>
-<p>There are may types of error correction such as:
- </p>
+<p>There are may types of error detections such as:
+<ul>
+<li>Checksum- Where each transmission is followed by a numerical value based on the bits in the message</li>
+<li>CRCs- Cyclic redundancy checks</li>
+<li>Cryptographic hash functions</li><ul><p>
+<p><br>The most common used ones are (also error correcting):</br>
+<ul><li>Parity Bits</li>
+<li>Hamming Code</li>
+</p>
+<p> There are two types of parity bits, there are odd and even parities.
+In simple terms a parity is a bit that acts as a check within a transmission.
+<br>Depending on the transmission if we had for example <b>x0111000</b></br>, where x is the
+parity (8th bit), if we had even parity it means that the transmission should have an even amount of one's
+in this case x will be 1. If it was odd parity then x will be 0 as we will have an odd amount of 1's.
+<br>If we had <b>x010101</b> x will be 0 for even parity and x will be 1 for odd parity<p>
+<p>But this still isn't bulletproof, what if there were two errors or the error was the parity?</p>
+<p>So there is also Hamming code, which is in a sense multiple parity bits but the parity bits are ordered in a way such that almost
+every bit is covered by two parities</p>
+<p> Why Don't we just have lots of parities over the whole transmission?</p>
+<p>Well that's a good question but how efficient will that be and isn't is costly, the more transmission the more expensive.
+There is something called the information rate: It is the rate of useful information rate.</p> 
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Information rate</th>
+    <th>Error Correction</th>
+    <th>Bit error rate</th>
+  </tr>
+  <tr>
+    <td>Parity</td>
+    <td>n/n+1</td>
+    <td>1 Error Correction</td>
+    <td>Very Low</td>
+  </tr>
+  <tr>
+    <td>3-Rep</td>
+    <td>1/3</td>
+    <td>1 error correction</td>
+    <td>Low</td>
+  </tr>
+<tr>
+    <td>H(7,4)</td>
+    <td>4/7</td>
+    <td>1 error correction</td>
+    <td>Low</td>
+  </tr>
+<tr>
+    <td>H(15,11)</td>
+    <td>11/15</td>
+    <td>1 error correction</td>
+    <td>Not so Low</td>
+  </tr>
+<tr>
+    <td>H(31,26)</td>
+    <td>26/31</td>
+    <td>1 error correction</td>
+    <td>Not so Low</td>
+  </tr>
+<tr>
+    <td>5-reps</td>
+    <td>1/5</td>
+    <td>2 error correction</td>
+    <td>Medium 5%</td>
+  </tr>
+<tr>
+    <td>7-reps</td>
+    <td>1/7</td>
+    <td>3 error correction</td>
+  </tr>
+</table>
+
 <div class="callout">
 <ul class="menu simple">
 <li><a href="#">Author: ...</a></li>
